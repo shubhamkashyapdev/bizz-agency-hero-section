@@ -1,0 +1,4 @@
+# create you github account 
+# pull this repository in you pc
+# git checkout kiaan
+# make changes to code, then make a pull request to my

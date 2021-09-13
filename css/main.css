@@ -1,0 +1,111 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&display=swap');
+
+/* variables */
+:root {
+  --primary-clr: #556897;
+  --secondary-clr: #6784bf;
+  --white-clr: #fff;
+  --body-font: 'Montserrat', sans-serif;
+  --heading-font: 'Montserrat', sans-serif;
+}
+
+/* default styling cleanup */
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--body-font);
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  color: var(--white-clr);
+  background-image: linear-gradient(to right,var(--primary-clr), var(--secondary-clr));
+  
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white-clr);
+}
+
+image {
+  width: 100%;
+}
+
+/* global styles */
+.container {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+}
+
+/* header */
+.header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  background-image: url('../assets/images/design-shapes.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(0.5px);
+  
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: rgba(255,255,255,0.2);
+  z-index: -1;
+  backdrop-filter: blur(1px);
+}
+
+/* navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 120px;
+}
+.logo img {
+  width: 100%;
+}
+
+.nav_list {
+  display: flex;
+}
+.nav_list li:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.nav_list a {
+  transition: border-bottom 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.nav_list a:hover {
+  border-bottom: 2px solid var(--white-clr);
+}
+
+
+
+
